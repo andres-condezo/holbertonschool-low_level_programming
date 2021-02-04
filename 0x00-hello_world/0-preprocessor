@@ -1,1 +1,2 @@
-idf
+#!/bin/bash
+gcc -E -o $CFILE c
