@@ -1,8 +1,12 @@
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
 
-/* betty style doc for function main goes there */
+/**
+ * main - Preint positive, negative or zero.
+ *
+ * Return: 0
+ */
+
 int main(void)
 {
 	int n;
@@ -12,14 +16,17 @@ int main(void)
 /* your code goes there */
 
 
-	if (n > 0){
+	if (n > 0)
+	{
 		printf("%d is positive", n);
-	} else if (n < 0) {
-		printf("%d is negative", n);
-	}else {
-		printf("%d is zero", n);
 	}
-
+	else if (n < 0)
+	{
+		printf("%d is negative", n);
+}
+else
+{
+		printf("%d is zero", n);
+}
 	return (0);
-					
 }
