@@ -1,18 +1,26 @@
 #include <stdio.h>
 
 /**
- * main - Prints prints the alphabet in lowercase and uppercase
+ * main - Prints prints the alphabet in lowercase and uppercase without q or e.
  *
  * Return: 0 (Success)
  */
 int main(void)
 {
-char alpha[] = "abcdfghijklmnoprstuvwxyz";
-int i;
 
-for (i = 0; i <= 24; i++)
+char ch;
+
+for (ch = 'a'; ch <= 'z'; ch++)
 {
-	putchar(alpha[i]);
+	if (ch == 'e' || ch == 'q')
+	{
+		ch++;
+	}
+	else
+	{
+		putchar(ch);
+	}
 }
+	putchar('\n');
 	return (0);
 }
