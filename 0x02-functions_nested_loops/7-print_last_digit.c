@@ -8,21 +8,21 @@
 int print_last_digit(int n)
 {
 	int mod;
+	int lastD;
 
+	mod = n % 10;
 	if (n > 0)
 	{
-		mod = n % 10;
-		return (mod);
+		lastD = mod;
 	}
 	else if (n == 0)
 	{
-		return (0);
+		lastD = 0;
 	}
 	else
 	{
-		mod = n % 10;
-		int x = mod * -1;
-
-		return (x);
+		lastD = mod * -1;
 	}
+	_putchar(lastD + '0');
+	return (lastD);
 }
