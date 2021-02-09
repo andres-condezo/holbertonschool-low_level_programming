@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
  * add -  Adds two integers and returns the result.
- * * @add1: Addend1
- * @add1: Addend2
+ * @add1: Addend1
+ * @add2: Addend2
  *
  * Return: Void
  */
