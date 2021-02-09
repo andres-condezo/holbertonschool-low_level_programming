@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "holberton.h"
 
 /**
@@ -15,5 +16,6 @@ for (i = 0; i <= 8; i++)
 _putchar(string[i]);
 }
 
-	return (0);
+_putchar('\n');
+return (0);
 }
