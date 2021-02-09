@@ -22,7 +22,6 @@ void times_table(void)
 			{
 				_putchar(',');
 				_putchar(' ');
-				_putchar(' ');
 				_putchar(prodD + '0');
 				_putchar(prodU + '0');
 			}
