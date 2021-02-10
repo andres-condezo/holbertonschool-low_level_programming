@@ -9,41 +9,30 @@
 void print_times_table(int n)
 {
 	int fac1, fac2;
-	int prod, prodC, prodD, prodU;
+	int prodC, prodD, prodU;
 
-	if (n == 0 || n > 15)
-	{
-
-	}
-	else
+	if (!(n == 0 || n > 15))
 	{
 		for (fac1 = 0; fac1 <= n; fac1++)
 		{
 			_putchar('0');
 			for (fac2 = 1; fac2 <= n; fac2++)
 			{
-				prod = fac1 * fac2;
-
-				if (prod > 99)
+				if ((fac1 * fac2) > 99)
 				{
-					prodU = prod % 10;
-					prodD = ((prod % 100) - prodU ) / 10;
-					prodC = prod / 100;
 					_putchar(',');
 					_putchar(' ');
-					_putchar(prodC + '0');
-					_putchar(prodD + '0');
-					_putchar(prodU + '0');
+					_putchar(prodC = ((fac1 * fac2) / 100) + '0');
+					_putchar(prodD = ((((fac1 * fac2) % 100) - prodU) / 10) + '0');
+					_putchar(prodU = ((fac1 * fac2) % 10) + '0');
 				}
-				else if (prod > 9 && prod <= 99)
+				else if ((fac1 * fac2) > 9 && (fac1 * fac2) <= 99)
 				{
-					prodD = prod / 10;
-					prodU = prod % 10;
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
-					_putchar(prodD + '0');
-					_putchar(prodU + '0');
+					_putchar(prodD = ((fac1 * fac2) / 10)  + '0');
+					_putchar(prodU = ((fac1 * fac2) % 10) + '0');
 				}
 				else
 				{
@@ -51,11 +40,10 @@ void print_times_table(int n)
 					_putchar(' ');
 					_putchar(' ');
 					_putchar(' ');
-					_putchar(prod + '0');
+					_putchar((fac1 * fac2) + '0');
 				}
 			}
 			_putchar(10);
 		}
-
 	}
 }
