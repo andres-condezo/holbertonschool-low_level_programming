@@ -9,12 +9,12 @@
 int main(void)
 {
 	int i;
-	long add1 = 1;
-	long add2 = 2;
-	long new_add = 0;
-	long sum = 0;
+	unsigned long add1 = 1;
+	unsigned long add2 = 2;
+	unsigned long new_add = 0;
+	unsigned long sum = 2;
 
-	while (new_add <= 4000000)
+	while (new_add < 4000000)
 	{
 		new_add = add1 + add2;
 		add1 = add2;
@@ -22,10 +22,10 @@ int main(void)
 
 		if ((new_add % 2) == 0)
 		{
-			sum += new_add;
+			sum = sum + new_add;
 		}
-
 	}
+
 	printf("%ld\n", sum);
 
 	return (0);
