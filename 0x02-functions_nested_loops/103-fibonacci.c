@@ -8,7 +8,6 @@
  */
 int main(void)
 {
-	int i;
 	unsigned long add1 = 1;
 	unsigned long add2 = 2;
 	unsigned long new_add = 0;
