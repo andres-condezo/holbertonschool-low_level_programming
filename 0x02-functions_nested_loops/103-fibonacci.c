@@ -16,14 +16,14 @@ int main(void)
 
 	while (new_add < 4000000)
 	{
-		new_add = add1 + add2;
-		add1 = add2;
-		add2 = new_add;
-
 		if ((new_add % 2) == 0)
 		{
 			sum = sum + new_add;
 		}
+
+		new_add = add1 + add2;
+		add1 = add2;
+		add2 = new_add;
 	}
 
 	printf("%lu\n", sum);
