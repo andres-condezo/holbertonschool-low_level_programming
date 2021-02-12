@@ -57,41 +57,38 @@ int print_positive(int n)
 
 int print_negative(int n)
 {
-	int temp;
-
-	temp = n * -1;
 	int u, d, c, m;
 
-	u = temp % 10;
+	u = n % 10;
 
 	_putchar('-');
-	if (temp == 0)
+	if (n == 0)
 	{
 		_putchar(u + '0');
 	}
-	else if (temp > 0 && temp < 9)
+	else if (n > 0 && n < 9)
 	{
 		_putchar(u + '0');
 	}
-	else if (temp > 9 && temp <= 99)
+	else if (n > 9 && n <= 99)
 	{
-		d = temp / 10;
+		d = n / 10;
 		_putchar(d + '0');
 		_putchar(u + '0');
 	}
-	else if (temp > 99 && temp < 999)
+	else if (n > 99 && n < 999)
 	{
-		c = temp / 100;
-		d = (temp % 100) / 10;
+		c = n / 100;
+		d = (n % 100) / 10;
 		_putchar(c + '0');
 		_putchar(d + '0');
 		_putchar(u + '0');
 	}
 	else
 	{
-		m = temp / 1000;
-		c = (temp % 1000) / 100;
-		d = (temp % 100) / 10;
+		m = n / 1000;
+		c = (n % 1000) / 100;
+		d = (n % 100) / 10;
 		_putchar(m + '0');
 		_putchar(c + '0');
 		_putchar(d + '0');
@@ -116,6 +113,7 @@ void print_number(int n)
 	}
 	else
 	{
+		n = -n;
 		print_negative(n);
 	}
 }
