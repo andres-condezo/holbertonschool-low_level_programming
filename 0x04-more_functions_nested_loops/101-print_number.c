@@ -116,6 +116,6 @@ void print_number(int n)
 	}
 	else
 	{
-		print_positive(n);
+		print_negative(n);
 	}
 }
