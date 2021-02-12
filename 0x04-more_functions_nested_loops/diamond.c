@@ -8,53 +8,56 @@
 void print_triangle(int size)
 {
 	int i;
-	int qlts, qlth;
-	int qrts, qrth;
-	int qlds, qldh;
-	int qrds, qrdh;
-	char hash = '#';
-	char space = ' ';
+	int qI, qII, qIII, qIV;
+	int qIh, qIIh, qIIIh, qIVh;
 
 	if (size > 0)
 	{
 		for (i = 1; i <= size; i++)
 		{
-			for (qlts = size; qlts > i; qlts--)
+			/*Cuadrante izquierdo superior*/
+			for (qII = size; qII > i; qII--)
 			{
-				_putchar(space);
+				_putchar(' ');
 			}
-			for (qlth = 1; qlth <= i; qlth++)
+			for (qIIh = 1; qIIh <= i; qIIh++)
 			{
-				_putchar(hash);
-			}
-
-			for (qrts = size; qrts > i; qrts--)
-			{
-				_putchar(space);
-			}
-			for (qrth = 1; qrth <= i; qrth++)
-			{
-				_putchar(hash);
+				_putchar('#');
 			}
 
-			for (qlds = size; qlds > i; qlds--)
+			/*Cuadrante derecho superior*/
+			for (qIh = 1; qIh <= i; qIh++)
 			{
-				_putchar(space);
+				_putchar('#');
 			}
-			for (qldh = 1; qldh <= i; qldh++)
+			for (qI = size; qI > i; qI--)
 			{
-				_putchar(hash);
+				_putchar(' ');
+			}
+		_putchar(10);
+		}
+
+		for (i = 1; i <= size; i++)
+		{
+			/*Cuadrante izquierdo inferior*/
+			for (qIII = 1; qIII < i; qIII++)
+			{
+				_putchar(' ');
+			}
+			for (qIIIh = size; qIIIh >= i; qIIIh--)
+			{
+				_putchar('#');
 			}
 
-			for (qrds = size; qrds > i; qrds--)
+			/*Cuadrante derecho inferior*/
+			for (qIVh = size; qIVh >= i; qIVh--)
 			{
-				_putchar(space);
+				_putchar('#');
 			}
-			for (qrdh = 1; qrdh <= i; qrdh++)
+			for (qIV = 1; qIV < i; qIV++)
 			{
-				_putchar(hash);
+				_putchar(' ');
 			}
-
 		_putchar(10);
 		}
 	}
