@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	long long int n, primo, max;
+	unsigned long int n, primo, max;
 
 	primo = 2;
 	n = 612852475143;
@@ -25,6 +25,6 @@ int main(void)
 		}
 	}
 
-printf("%lld\n", max);
+printf("%lu\n", max);
 return (0);
 }
