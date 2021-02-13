@@ -14,19 +14,17 @@ int main(void)
 
 	while (n > 1)
 	{
-		if (n % primo == 0)
+		if ((n % primo) == 0)
 		{
 			max = primo;
 			n = n / primo;
-
 		}
 		else
 		{
 			primo++;
 		}
-
 	}
 
-printf("%lli\n", max);
+printf("%lld\n", max);
 return (0);
 }
