@@ -1,10 +1,11 @@
 #include <stdio.h>
 /**
- * print_alphabet - Prints alphabet in lower case
+ * main - Finds and prints the largest
+ * prime factor of the number 61285247514.
  *
  * Return: Void
  */
-int main (void)
+int main(void)
 {
 	long long int n, primo, max;
 
