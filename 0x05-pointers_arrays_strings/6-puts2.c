@@ -16,10 +16,10 @@ void puts2(char *str)
 	}
 
 
-	int len = i;
+	int len = i - 1;
 	int j;
 
-	for (j = 0; j <= len; j++)
+	for (j = 0; j < len; j++)
 	{
 		if ((j % 2) == 0)
 		{
