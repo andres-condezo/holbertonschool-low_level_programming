@@ -26,6 +26,7 @@ void puts_half(char *str)
 			_putchar(str[mid_even]);
 			mid_even++;
 		}
+			_putchar(str[mid_even]);
 	}
 	else
 	{
@@ -36,6 +37,7 @@ void puts_half(char *str)
 			_putchar(str[mid_odd]);
 			mid_odd++;
 		}
+			_putchar(str[mid_odd]);
 	}
 
 	_putchar('\n');
