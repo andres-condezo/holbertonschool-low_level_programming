@@ -15,13 +15,13 @@ void puts_half(char *str)
 		i++;
 	}
 
-	int len = i - 1;
+	int len = i;
 
 	if (len % 2 == 0)
 	{
 		int mid_even = (len / 2);
 
-		while (mid_even <= len)
+		while (mid_even < len)
 		{
 			_putchar(str[mid_even]);
 			mid_even++;
@@ -32,12 +32,11 @@ void puts_half(char *str)
 	{
 		int mid_odd = (len / 2) + 1;
 
-		while (mid_odd <= len)
+		while (mid_odd < len)
 		{
 			_putchar(str[mid_odd]);
 			mid_odd++;
 		}
-			_putchar(str[mid_odd]);
 	}
 
 	_putchar('\n');
