@@ -19,7 +19,7 @@ void puts_half(char *str)
 
 	if (len % 2 == 0)
 	{
-		int mid_even = (len / 2) + 1;
+		int mid_even = (len / 2);
 
 		while (mid_even <= len)
 		{
@@ -29,7 +29,7 @@ void puts_half(char *str)
 	}
 	else
 	{
-		int mid_odd = (len / 2) + 2;
+		int mid_odd = (len / 2) + 1;
 
 		while (mid_odd <= len)
 		{
