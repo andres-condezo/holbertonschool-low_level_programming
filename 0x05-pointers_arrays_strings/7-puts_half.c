@@ -9,17 +9,19 @@
 void puts_half(char *str)
 {
 	int i = 0;
+	int len;
+	int mid_even, mid_odd;
 
 	while (str[i] != '\0')
 	{
 		i++;
 	}
 
-	int len = i;
+	len = i;
 
 	if (len % 2 == 0)
 	{
-		int mid_even = (len / 2);
+		mid_even = (len / 2);
 
 		while (mid_even < len)
 		{
@@ -29,7 +31,7 @@ void puts_half(char *str)
 	}
 	else
 	{
-		int mid_odd = (len / 2) + 1;
+		mid_odd = (len / 2) + 1;
 
 		while (mid_odd < len)
 		{
