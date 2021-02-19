@@ -21,6 +21,7 @@ char *rot13(char *s)
 			if (s[i] == alpha[i2])
 			{
 				s[i] = root[i2];
+				break;
 			}
 		}
 	}
