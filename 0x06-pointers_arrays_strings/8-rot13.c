@@ -7,7 +7,6 @@
  *
  * Return: s.
  */
-
 char *leet(char *s)
 {
 	int i, i2;
@@ -21,6 +20,7 @@ char *leet(char *s)
 		{
 			if (s[i] == alpha[i2])
 			{
+
 				s[i] = leet[i2];
 			}
 		}
