@@ -22,10 +22,6 @@ char *rot13(char *s)
 			{
 				s[i] = root[i2];
 			}
-			else
-			{
-				s[i] = s[i];
-			}
 		}
 	}
 
