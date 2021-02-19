@@ -1,18 +1,18 @@
 
 #include "holberton.h"
 /**
- * leet - Encodes a string into 1337.
- * changes all lowercase letters of a string to uppercase.
+ * rot13 - Encodes a string into root13.
  * @s: An array of chars.
  *
  * Return: s.
  */
-char *leet(char *s)
+
+char *rot13(char *s)
 {
 	int i, i2;
 
-	char alpha[] = "aAeEoOtTlL";
-	char leet[] = "4433007711";
+	char alpha[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char root[] = "nopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklm";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -20,8 +20,7 @@ char *leet(char *s)
 		{
 			if (s[i] == alpha[i2])
 			{
-
-				s[i] = leet[i2];
+				s[i] = root[i2];
 			}
 		}
 	}
