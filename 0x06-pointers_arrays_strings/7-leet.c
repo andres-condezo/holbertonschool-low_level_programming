@@ -14,9 +14,9 @@ char *leet(char *s)
 	char alpha[] = "aAeEoOtTlL";
 	char leet[] = "4433007711";
 
-	for (i = 0; s[i] != '\n'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (i2 = 0; alpha[i2] != '\n'; i2++)
+		for (i2 = 0; alpha[i2] != '\0'; i2++)
 		{
 			if (s[i] == alpha[i2])
 			{
