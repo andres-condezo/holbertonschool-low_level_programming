@@ -1,41 +1,20 @@
 
 #include "holberton.h"
 /**
- * _strcat - Concatenates two strings.
- * @dest: a pointer to the resulting string.
- * @src: Srring to appends.
+ * _memset - Concatenates two strings.
+ * @s: a pointer to the resulting string.
+ * @b: Srring to appends.
  *
- * Return: dest
+ * Return: s
  */
-char *_strcat(char *dest, char *src)
+char *_memset(char *s, char b, unsigned int n)
 {
+	unsigned int i;
 
-	int i = 0;
-	int j = 0;
-	int index = 0;
-	int len, len2;
+	for (i = 0; i < n && b != '\0'; i++)
+		s[i] = b;
+	for ( ; i < n; i++)
+		s[i] = '\0';
 
-	while (dest[i] != '\0')
-	{
-		i++;
-	}
-
-	while (src[j] != '\0')
-	{
-		j++;
-	}
-
-
-	len = i;
-	len2 = j;
-
-
-	while (index <= len2)
-	{
-		dest[len] = src[index];
-		index++;
-		len++;
-	}
-
-	return (dest);
+	return (s);
 }
