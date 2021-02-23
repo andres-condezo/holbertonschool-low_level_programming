@@ -2,7 +2,7 @@
 #include "holberton.h"
 /**
  * _memcpy - copies n bytes from memory area src to memory area dest.
- * @dests: a pointer to the resulting string.
+ * @dest: a pointer to the resulting string.
  * @src: Srring to appends.
  * @n: numbber of chars to appends.
  *
