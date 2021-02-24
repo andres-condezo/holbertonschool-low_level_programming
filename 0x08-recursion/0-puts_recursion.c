@@ -1,19 +1,22 @@
-
 #include "holberton.h"
+
 /**
- * _memset - Concatenates two strings.
- * @s: a pointer to the resulting string.
- * @b: Srring to appends.
- * @n: numbber of chars to appends.
+ * _puts_recursion - Prints a string, followed by a new line.
+ * @s: String to be printed.
  *
  * Return: s
  */
-char *_memset(char *s, char b, unsigned int n)
+void _puts_recursion(char *s)
 {
-	unsigned int i;
 
-	for (i = 0; i < n && b != '\0'; i++)
-		s[i] = b;
+	if (*s == '\0')
+	{
+		_putchar('\n');
+		return;
+	}
 
-	return (s);
+	_putchar(*s);
+	s++;
+
+	_puts_recursion(s);
 }
