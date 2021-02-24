@@ -17,7 +17,7 @@ void print_number(int n)
 		_putchar('-');
 		n = -n;
 	}
-	if ((temp/10) > 10)
+	if ((temp/10) > 0)
 	{
 		print_number(temp/10);
 	}
