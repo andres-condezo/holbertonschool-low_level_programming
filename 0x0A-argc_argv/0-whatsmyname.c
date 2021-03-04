@@ -2,9 +2,9 @@
 #include "holberton.h"
 
 /**
- * main - Prints its name, followed by a new line. 
- * @argc: contains the number of arguments passed to the program..
- * @argv: a one-dimensional array of strings. 
+ * main - Prints its name, followed by a new line.
+ * * @argc: contains the number of arguments passed to the program..
+ * @argv: a one-dimensional array of strings.
  *
  * Return: 0 Success.
  */
