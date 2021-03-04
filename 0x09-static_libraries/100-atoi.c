@@ -1,5 +1,5 @@
 int _atoi(char *s)
 {
-	s = "a";
+	s[1] = 'a';
 	return (0);
 }
