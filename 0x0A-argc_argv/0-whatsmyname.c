@@ -1,22 +1,18 @@
+#include <stdio.h>
 #include "holberton.h"
 
 /**
- * _puts_recursion - Prints a string, followed by a new line.
- * @s: String to be printed.
+ * main - Prints its name, followed by a new line. 
+ * @argc: contains the number of arguments passed to the program..
+ * @argv: a one-dimensional array of strings. 
  *
- * Return: s
+ * Return: 0 Success.
  */
-void _puts_recursion(char *s)
+int main(int argc, char *argv[])
 {
+	argc = argc;
 
-	if (*s == '\0')
-	{
-		_putchar('\n');
-		return;
-	}
+	printf("%s\n", argv[0]);
 
-	_putchar(*s);
-	s++;
-
-	_puts_recursion(s);
+	return (0);
 }
