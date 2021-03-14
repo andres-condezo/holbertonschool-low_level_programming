@@ -7,7 +7,7 @@
  * @size: size of the array.
  * @c: Char to initializes.
  *
- * Return: pointer to the array or null.
+ * Return: pointer to the array or null if malloc fails.
  */
 char *create_array(unsigned int size, char c)
 {
@@ -31,5 +31,5 @@ char *create_array(unsigned int size, char c)
 		array[i] = c;
 	}
 
-	return (0);
+	return (array);
 }
