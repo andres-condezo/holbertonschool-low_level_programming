@@ -3,14 +3,14 @@
 
 /**
  * struct dog - dog data.
- * @a: Dog name.
- * @b: Dog age.
- * @c: Dog owner.
+ * @name: Dog name.
+ * @age: Dog age.
+ * @owner: Dog owner.
  *
  * Description:  An struct for save dog information.
  */
 
-struct dog 
+struct dog
 {
 	char *name;
 	float age;
