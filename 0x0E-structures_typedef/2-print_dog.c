@@ -20,14 +20,7 @@ else
 printf("Name: (nil)\n");
 }
 
-if (d->age)
-{
 printf("Age: %f\n", d->age);
-}
-else
-{
-printf("Age: (nil)\n");
-}
 
 if (d->owner)
 {
