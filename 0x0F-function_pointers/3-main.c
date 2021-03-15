@@ -12,6 +12,8 @@
 
 int main(int argc, char *argv[])
 {
+    int res;
 
+    printf("%d\n", res);
     return (0);
 }
