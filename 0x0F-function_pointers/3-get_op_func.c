@@ -1,3 +1,4 @@
+#include _3
 op_t ops[] = {
         {"+", op_add},
         {"-", op_sub},
