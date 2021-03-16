@@ -16,7 +16,6 @@ int main(int argc, char *argv[])
 
 	int (*f)(int, int);
 	int num1, num2;
-	char  array[] = "+-*/";
 
 	if (argc != 4)
 	{
