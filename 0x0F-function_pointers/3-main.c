@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	num2 = atoi(argv[3]);
 
 
-	switch (*(argv[2]))
+	switch (argv[2][0])
 	{
 		case '+':
 			break;
