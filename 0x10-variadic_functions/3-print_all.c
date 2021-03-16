@@ -87,11 +87,15 @@ void print_all(const char * const format, ...)
 			{
 				ops[j].fn(parameters);
 
-				if (format[i + 1])
+				switch (format[i + 1])
 				{
-					printf(", ");
+					case 0:
+						break;
+					default:
+						printf(", ");
 				}
 			}
+			j++;
 		}
 		i++;
 	}
