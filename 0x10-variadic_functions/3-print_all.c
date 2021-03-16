@@ -44,12 +44,13 @@ void imp_f(va_list parameters)
  */
 void imp_s(va_list parameters)
 {
-	if (parameters == NULL)
+
+	char *string = va_arg(parameters, char *);
+
+	if (string == NULL)
 	{
 		printf("(nil)");
 	}
-	char *string = va_arg(parameters, char *);
-
 	printf("%s", string);
 }
 
