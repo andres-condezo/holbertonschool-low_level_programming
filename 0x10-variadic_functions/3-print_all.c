@@ -49,7 +49,7 @@ void imp_s(va_list parameters)
 
 	if (string == NULL)
 	{
-		printf("(nil)");
+		string = "(nil)";
 	}
 	printf("%s", string);
 }
