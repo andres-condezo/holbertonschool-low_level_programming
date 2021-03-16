@@ -3,7 +3,6 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 
-
 /**
  * imp_c - Prints a char.
  * @parameters: A list of types of arguments.
@@ -23,7 +22,7 @@ void imp_c(va_list parameters)
  */
 void imp_i(va_list parameters)
 {
-        printf("%d", va_arg(parameters, int));
+	printf("%d", va_arg(parameters, int));
 }
 
 /**
@@ -34,7 +33,7 @@ void imp_i(va_list parameters)
  */
 void imp_f(va_list parameters)
 {
-        printf("%f", va_arg(parameters, double));
+	printf("%f", va_arg(parameters, double));
 }
 
 /**
@@ -45,12 +44,13 @@ void imp_f(va_list parameters)
  */
 void imp_s(va_list parameters)
 {
-        char *string = va_arg(parameters, char *);
-        if (parameters == NULL)
-        {
+	char *string = va_arg(parameters, char *);
+
+	if (parameters == NULL)
+	{
 		printf("(nil)");
-        }
-        printf("%s", string);
+	}
+	printf("%s", string);
 }
 
 
@@ -65,7 +65,7 @@ void print_all(const char * const format, ...)
 {
 	va_list parameters;
 	int i = 0, j;
-	
+
 	op_structure ops[] = {
 	{"c", imp_c},
 	{"i", imp_i},
