@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * sum_them_all - Prints a sum.
- * @n: number of parameters.
+ * print_list - Prints all the elements of a list_t list.
+ * @h: pointer to a list_t.
  *
- * Return: sum.
+ * Return: size_t.
  */
 size_t print_list(const list_t *h)
 {
@@ -13,7 +13,7 @@ size_t print_list(const list_t *h)
 
 	if (temp == NULL)
 	{
-		return (-1);
+		return (0);
 	}
 
 	while (temp != NULL)
