@@ -20,8 +20,9 @@ int _strlen(const char *s)
 }
 
 /**
- * print_list - Prints all the elements of a list_t list.
- * @h: pointer to a list_t.
+ * add_node - Adds a new node at the beginning of a list_t list.
+ * @head: Pointer to a list_t.
+ * @str: String to be copied.
  *
  * Return: The address of the new element, or NULL if it failed.
  */
@@ -31,22 +32,23 @@ list_t *add_node(list_t **head, const char *str)
 
 	if (head == NULL)
 	{
-		return(NULL);
+		return (NULL);
 	}
 
 	list_t *temp = NULL;
+
 	temp = malloc(sizeof(list_t));
-	
+
 	if (temp == NULL)
 	{
-		return(NULL);
+		return (NULL);
 	}
 
 	temp->str = strdup(str);
-	if(temp->str == NULL)
+	if (temp->str == NULL)
 	{
 		free(temp->str);
-		return(NULL);
+		return (NULL);
 	}
 	temp->len = _strlen(str);
 	temp->next = *head;
