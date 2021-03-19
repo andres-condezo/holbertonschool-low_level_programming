@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdarg.h>
 #include "lists.h"
 
 /**
@@ -9,9 +6,28 @@
  *
  * Return: sum.
  */
-
-int sum_them_all(const unsigned int n, ...)
+size_t print_list(const list_t *h)
 {
+	size_t nodes = 0;
 
-return (0);
+	if (h == NULL)
+	{
+		return (-1);
+	}
+
+	while (h != NULL)
+	{
+		if (h->str == NULL)
+		{
+			printf("[0] (nil)\n");
+		}
+		else
+		{
+			printf("[%d] %s\n", h->len, h->str);
+		}
+		nodes++;
+		h = h->next;
+	}
+
+	return (nodes);
 }
