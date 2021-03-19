@@ -2,9 +2,7 @@
 #define VARIADIC_FNCTIONS
 #include <stdio.h>
 #include <stdlib.h>
-
-int _putchar(char c);
-size_t print_list(const list_t *h);
+#include <stdarg.h>
 
 /**
  * struct list_s - singly linked list
@@ -22,5 +20,9 @@ typedef struct list_s
     unsigned int len;
     struct list_s *next;
 } list_t;
+
+
+int _putchar(char c);
+size_t print_list(const list_t *h);
 
 #endif
