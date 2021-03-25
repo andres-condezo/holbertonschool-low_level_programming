@@ -14,7 +14,7 @@ unsigned int basePowerTo(unsigned int base, unsigned int exp)
 
 	if (exp == 0)
 	{
-		return(1);
+		return (1);
 	}
 
 	while (exp != 0)
@@ -46,12 +46,12 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	}
 
-	while(b[index] != '\0')
+	while (b[index] != '\0')
 	{
 		index++;
 	}
 	index--;
-	
+
 	while (index >= 0)
 	{
 		if (b[index] != '0' && b[index] != '1')
