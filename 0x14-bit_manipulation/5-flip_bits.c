@@ -3,7 +3,7 @@
  * flip_bits - Returns the number of bits you would need to
  * flip to get from one number to another..
  * @n: Number to be changed.
- * @n: Number to desidered.
+ * @m: Number to desidered.
  *
  * Return: number of bits you would need to flip .
  */
