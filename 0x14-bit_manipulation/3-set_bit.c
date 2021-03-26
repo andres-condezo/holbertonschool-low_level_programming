@@ -1,6 +1,25 @@
 #include "holberton.h"
 
 /**
+ * size -  Get the size of a number on bits.
+ * @bits: Number to get it size.
+ *
+ * Return: 1 if it worked, or -1 if an error occurred.
+ */
+
+int size(int bits)
+{
+	int size = 0;
+
+	for (; bits != 0; bits >>= 1)
+	{
+		size++;
+	}
+
+	return (size);
+}
+
+/**
  * set_bit -  Sets the value of a bit to 1 at a given index..
  * @n: Number to be searched.
  * @index: the index, starting from 0 of the bit you want toet.
@@ -10,18 +29,19 @@
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	int res, mask;
 	unsigned long int num = *n;
 
-	if (n == 0)
+	int bitsOfN = size(num);
+
+	if (index >= bitsOfN)
 	{
-		*n = 1;
-		return (1);
+		return (-1);
 	}
-	else if (n)
+
+	if (n)
 	{
-		mask = 1 << index;
-		*n = mask | num;
+		num = *n;
+		*n = (1 << index) | num;
 
 		return (1);
 	}
