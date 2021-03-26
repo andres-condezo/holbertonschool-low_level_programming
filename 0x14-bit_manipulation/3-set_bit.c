@@ -7,9 +7,9 @@
  * Return: 1 if it worked, or -1 if an error occurred.
  */
 
-int size(int bits)
+unsigned int size(int bits)
 {
-	int size = 0;
+	unsigned int size = 0;
 
 	for (; bits != 0; bits >>= 1)
 	{
@@ -31,9 +31,9 @@ int set_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int num = *n;
 
-	int bitsOfN = size(num);
+	unsigned int bitsOfN = size(num);
 
-	if (index >= bitsOfN)
+	if ((index >= bitsOfN) && num != 0)
 	{
 		return (-1);
 	}
