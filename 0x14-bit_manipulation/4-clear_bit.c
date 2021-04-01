@@ -1,7 +1,6 @@
 #include "holberton.h"
 
-/**
- * size -  Get the size of a number on bits.
+/** size -  Get the size of a number on bits.
  * @bits: Number to get it size.
  *
  * Return: 1 if it worked, or -1 if an error occurred.
