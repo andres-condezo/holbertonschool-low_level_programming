@@ -23,11 +23,6 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 
-	if (filename == NULL)
-	{
-		return (-1);
-	}
-
 	open_fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 
 	if (open_fd == -1)
@@ -35,17 +30,20 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 
-	if (text_content != NULL)
+	if (text_content == NULL)
 	{
-		write_fd = write(open_fd, text_content, len);
+		close(open_fd);
+		return (1);
+	}
 
-		if (write_fd == -1)
-		{
-			return (-1);
-		}
+	write_fd = write(open_fd, text_content, len);
+
+	if (write_fd == -1)
+	{
+		close(open_fd);
+		return (-1);
 	}
 
 	close(open_fd);
-
 	return (1);
 }
