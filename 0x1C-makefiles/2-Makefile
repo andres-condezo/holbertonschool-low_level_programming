@@ -2,7 +2,7 @@ CC = gcc
 SRC = main.c holberton.c
 
 # SCS  := $(wildcard *.c)
-OBJ  := $(SRC:.c=*.o)
+OBJ  := $(SRC:.c=.o)
 
 # OBJ = $(patsubst %.c,%.o,$(wildcard *.c))
 NAME = holberton
