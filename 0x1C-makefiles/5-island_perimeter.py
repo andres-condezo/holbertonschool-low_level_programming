@@ -12,5 +12,9 @@ def island_perimeter(grid):
             if column == 1:
                 count += 1
 
-    perimeter = 2 * (count + 1)
+    if count == 0:
+        perimeter = 0
+    else:
+        perimeter = 2 * (count + 1)
+
     return perimeter
