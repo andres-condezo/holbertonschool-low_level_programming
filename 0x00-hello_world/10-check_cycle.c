@@ -5,7 +5,7 @@
  * @list: linked list to be checked
  *
  * Return: 0 if is a singly linked list
- *		1 if is a circle linked list
+ *	   1 if is a circle linked list
  */
 
 int check_cycle(listint_t *list)
