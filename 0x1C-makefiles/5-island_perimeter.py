@@ -5,21 +5,21 @@
 def island_perimeter(grid):
     """That returns the perimeter of the island described in grid"""
 
-    # count = 0
-    base_actual = 0
-    base_max = 0
-    altura = 0
+    height = 0
+    idxs = []
 
     for row in grid:
-        base_actual = 0
-        for column in row:
-            if column == 1:
-                base_actual += 1
-                if base_actual > base_max:
-                    base_max = base_actual
-        if base_actual != 0:
-            altura += 1
+        count = 0
 
-    perimeter = 2 * (base_max + altura)
+        for index, value in enumerate(row):
+            if value == 1:
+                idxs.append(index)
+                count += 1
+
+        if count != 0:
+            height += 1
+
+    base = len(set(idxs))
+    perimeter = 2 * (base + height)
 
     return perimeter
