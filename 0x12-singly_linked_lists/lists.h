@@ -15,6 +15,7 @@
  * for Holberton project
  */
 
+
 typedef struct list_s
 {
 	char *str;
