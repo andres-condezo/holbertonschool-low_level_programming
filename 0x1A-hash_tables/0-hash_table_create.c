@@ -14,6 +14,13 @@ hash_table_t *hash_table;
 unsigned long int i;
 
 hash_table = malloc(sizeof(*hash_table));
+
+if (hash_table == NULL)
+{
+return (NULL);
+}
+
+hash_table->size = size;
 hash_table->array = malloc(sizeof(*(hash_table->array)) * size);
 
 if (hash_table->array == NULL)
