@@ -5,7 +5,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 /**
  * struct hash_node_s - Node of a hash table
  *
@@ -36,5 +36,6 @@ typedef struct hash_table_s
 } hash_table_t;
 
 /* Prototypes */
+hash_table_t *hash_table_create(unsigned long int size);
 
 #endif
