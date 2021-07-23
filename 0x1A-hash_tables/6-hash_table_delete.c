@@ -9,7 +9,7 @@
 void hash_table_delete(hash_table_t *ht)
 {
 	unsigned long int i;
-	hash_table_t *array;
+	hash_table_t **array;
 	hash_table_t *temp;
 	hash_table_t *prev;
 
